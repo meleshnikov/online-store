@@ -1,0 +1,25 @@
+### Добавить продукт в корзину
+POST http://localhost:8080/cart/product/add
+Content-Type: application/json
+
+{
+  "name": "dsfsdf"
+}
+
+### Получить корзину
+GET http://localhost:8080/cart/get
+
+### Добавить товары в заказ по id
+POST http://localhost:8080/store/order/add
+Content-Type: application/json
+
+{
+  "ids": [
+    "1",
+    "3"
+  ]
+}
+
+### Получить заказ
+GET http://localhost:8080/store/order/get
+
