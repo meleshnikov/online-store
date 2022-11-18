@@ -2,9 +2,7 @@ package com.skypro.store.controller;
 
 import com.skypro.store.model.Cart;
 import com.skypro.store.service.StoreService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class StoreController {
@@ -16,7 +14,8 @@ public class StoreController {
     }
 
     @PostMapping("/store/order/add")
-    public Cart add(int... ids) {
+    @ResponseBody
+    public Cart add(@RequestParam int... ids) {
         return storeService.add(ids);
     }
 

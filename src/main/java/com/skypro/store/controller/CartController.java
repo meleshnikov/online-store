@@ -24,10 +24,8 @@ public class CartController {
     }
 
     @GetMapping("cart/get")
-    public Cart getCart(){
+    public Cart getCart() {
         return this.cartService.getCart();
     }
-
-
-
+    
 }
