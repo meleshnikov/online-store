@@ -1,16 +1,11 @@
 ### Добавить продукт в корзину
-POST http://localhost:8080/cart/product/add
-Content-Type: application/json
-
-{
-  "name": "milk"
-}
+GET http://localhost:8080/cart/product/add?name=beer
 
 ### Получить корзину
 GET http://localhost:8080/cart/get
 
 ### Добавить товары в заказ по id
-POST http://localhost:8080/store/order/add?ids=1,5,6
+GET http://localhost:8080/store/order/add?ids=1,5,6
 
 ### Получить заказ
 GET http://localhost:8080/store/order/get

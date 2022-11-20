@@ -13,7 +13,7 @@ public class StoreController {
         this.storeService = storeService;
     }
 
-    @PostMapping("/store/order/add")
+    @GetMapping("/store/order/add")
     @ResponseBody
     public Cart add(@RequestParam int... ids) {
         return storeService.add(ids);
